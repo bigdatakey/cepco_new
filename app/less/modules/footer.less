@@ -1,0 +1,142 @@
+.footer{  
+  color: #fff;
+  font-weight: 300;
+  a{
+    color: #fff;    
+    &:hover{opacity: .5;}
+  }
+  &__main{
+    padding: 4.8rem 0;
+    background: url(../../img/footer/bg.jpg) center center no-repeat rgba(47, 48, 62, 0.8);
+    background-size: cover;
+  }
+  &__nav{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 4.6rem;
+    &-col{
+      width: 25%;
+      padding-right: 1.5rem;
+      font-size: 1.5rem;
+      li{
+        margin-bottom: 1.2em;
+        &:last-child{margin-bottom: 0;}
+      }
+    }
+  }
+  &__logotyps{
+    margin: 4.6rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-item{margin: 0 3.3rem;}
+  }
+  &__links{
+    margin-top: 4.6rem;
+    text-align: center;
+    li{
+      margin-bottom: 2rem;
+      font-size: 1.3rem;
+      &:last-child{margin-bottom: 0;}
+      a{
+        text-decoration: underline;
+      }
+    }
+  }
+  &__bot{
+    padding: .6rem 0;
+    background: #1A1C20;
+    &-wrap{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__copyright{
+    width: 16rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  &__bdc{
+    width: 16rem;
+    text-align: right;
+    font-size: 1.3rem;
+    white-space: nowrap;
+    a{text-decoration: underline;}
+  }
+  &__soc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li{
+      margin: 0 .4rem;
+    }
+    &-link{
+      display: block;
+      width: 3.2rem;
+      height: 3.2rem;
+      font-size: 0;
+      background: center center no-repeat;
+      &--facebook{background-image: url(../../img/footer/facebook.svg); background-size: .9rem auto;}
+      &--instagram{background-image: url(../../img/footer/instagram.svg); background-size: 1.7rem auto;}
+      &--vk{background-image: url(../../img/footer/vk.svg); background-size: 1.9rem auto;}
+      &--youtube{background-image: url(../../img/footer/youtube.svg); background-size: 1.7rem auto;}
+    }
+  }
+}
+
+@media only screen and (max-width : 767px){
+  .footer{
+    &__main{
+      padding: 3rem 0;
+    }
+    &__nav{
+      display: block;
+      margin-bottom: 3rem;
+      &-col{
+        width: 100%;
+        text-align: center;
+		padding: 0;
+        li{
+          &:last-child{margin-bottom: 1.2em;}
+        }
+      }
+    }
+    &__logotyps{
+      margin: 3rem 0;
+      &-item{margin: 0 2rem;}
+    }
+    &__links{
+      margin-top: 3rem;
+      li{
+        margin-bottom: 1em;
+        font-size: 1.3rem;
+        &:last-child{margin-bottom: 0;}
+      }
+    }
+    &__bot{
+      padding: 1rem 0;
+      &-wrap{
+        flex-direction: column;
+      }
+    }
+    &__copyright{
+      order: 2;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    &__bdc{
+      order: 3;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    &__soc{
+      order: 1;
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+<div class="page center">
+  <div class="cont">
+    <h1 class="blc-title">Сервисный центр в ТРЦ “Хорошо”</h1>
+  </div>
+  <div class="center__map" id="map"></div>
+  <div class="cont">
+    <ul class="center__list">
+      <li>Бесплатная парковка</li>
+      <li>Здесь принимается техника только в ПЛАТНЫЙ ремонт!</li>
+    </ul>
+    <article class="article">
+      <h3>Как добраться</h3>
+      <p>На машине нужно приехать в ТРЦ “Хорошо” по адресу Хорошёвское шоссе, дом 27. Центр огромный, его трудно не заметить. Разумеется, он оборудован парковками. С них нужно подняться на первый этаж, примерно в его середину. Мы находимся в монобрендовом салоне Apple “Prime”.</p>
+      <p>На метро - от станций “Полежаевская” и “Хорошёвская” Яндекс показывает одну минуту (120 метров) пешком.</p>
+      <p>Выход из последнего вагона из центра станций, в переходе направо и наверх налево. Выглядеть будет примерно так:</p>
+      <img src="img/pic/center-1.jpg" alt="" class="article__main-pic">
+      <p>Вам прямо на первом этаже, ещё 50 метров прямо, до конца ближайшего рукава:</p>
+      <img src="img/pic/center-2.jpg" alt="" class="article__main-pic">
+      <p>Мы здесь, внутри монобрендового салона Apple «Prime»:</p>
+      <img src="img/pic/center-3.jpg" alt="" class="article__main-pic">
+    </article>
+  </div>  
+</div>
+
+<script>
+    ymaps.ready(init);
+    var map;						
+    function init(){     
+        map = new ymaps.Map("map", {
+            center: [55.777094, 37.523725],
+            zoom: 16,
+            controls: []
+        });
+        map.behaviors.disable('scrollZoom');
+        placemark = new ymaps.Placemark(
+            [55.777094, 37.523725],
+            { 
+                iconCaption: 'Хорошёвское шоссе, 27',
+                balloonContent: 'Хорошёвское шоссе, 27'
+            },
+            {
+                preset: 'islands#redDotIconWithCaption'
+            }
+        );
+        map.geoObjects.add(placemark);
+    };        
+</script>

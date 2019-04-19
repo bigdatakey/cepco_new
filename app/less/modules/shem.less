@@ -1,0 +1,68 @@
+.shem{
+  margin: 7.4rem 0;
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 66rem;
+    margin: 0 auto 2rem;
+    &-pic{
+      width: 32.2rem;
+      height: 18.7rem;
+      position: relative;
+      margin-right: 1rem;
+    }
+    &-img{
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      &--1{width: 20.1rem; right: 4rem;}
+      &--2{width: 20rem; right: 2rem;}
+      &--3{width: 32.3rem;}
+      &--4{width: 23rem;}
+      &--5{width: 20.9rem; right: 3rem;}
+    }
+    &-txt{
+      width: calc(100% - 42.2rem);
+      position: relative;
+      top: -4rem;
+      font-size: 1.7rem;
+      font-weight: 300;
+      color: #2F303E;
+    }
+    &-numb{
+      font-weight: 500;
+      font-size: 15rem;
+      color: rgba(0, 0, 0, 0.05);
+      line-height: .8;
+      position: absolute;
+      top: -1rem;
+      right: 2.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width : 767px){
+  .shem{
+    &__item{
+      display: block;
+      width: 100%;
+      margin-bottom: 6rem;
+      &:last-child{margin-bottom: 0;}
+      &-pic{
+        width: 20rem;
+        margin: 0 auto;
+      }
+      &-img{
+        max-width: unset;
+        &--3{right: -3rem;}
+      }
+      &-txt{
+        text-align: center;
+        width: 100%;
+        top: 0;
+      }
+    }
+  }
+}

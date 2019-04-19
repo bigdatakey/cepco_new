@@ -1,0 +1,200 @@
+.diagramm{
+  margin: 7rem 0 9rem;
+  .blc-title{margin-bottom: 10rem;}
+  &__main{
+    width: 31.8rem;
+    height: 31.8rem;
+    margin: 0 auto;
+    position: relative;
+    svg{
+      position: absolute;
+      border-radius: 50%;
+      overflow: hidden;
+      top: 0;
+      left: 0;     
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      transition: transform .25s ease;      
+    }
+  }
+  .diagramm__phone,
+  .diagramm__tv,
+  .diagramm__camera,
+  .diagramm__laptop,
+  .diagramm__other{
+    position: relative;
+    transition: transform .25s ease;
+    z-index: 10;
+    cursor: pointer;
+    &:hover{
+      transform: scale(1.1);
+    }
+    
+  }
+  &__txt{
+    font-size: 1.6rem;
+    font-weight: 300;
+    position: absolute;
+    z-index: 5;
+    cursor: pointer;
+    transition: transform .25s ease;
+    white-space: nowrap;
+    color: rgba(47, 48, 62, 0.8);
+    //&:hover{transform: scale(1.1);}
+    b{
+      font-weight: 600;
+      font-size: 2rem;
+      display: block;
+    }
+    &--big{
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.5rem;
+      b{font-size: 3rem;}
+      &:hover{transform: translate(-50%, -50%);}
+    }
+    &--other{
+      bottom: -2rem;
+      right: -9rem;
+    }
+    &--camera{
+      top: 7rem;
+      right: -13rem;
+    }
+    &--laptop{
+      top: 16rem;
+      left: -10rem;
+    }
+    &--tv{
+      top: -3rem;
+      right: -3rem;
+    }
+    &--phone{
+      top: -3rem;
+      left: -3rem;
+    }
+  }
+  &__wrap{
+    position: relative;
+    &.other{
+      .other{
+      transform: scale(1.07);
+      .diagramm__pic-other{
+        display: block;
+        animation: fadeRight .25s both;
+      }
+    }
+      .diagramm__pic-other{
+        display: block;
+        animation: fadeRight .5s both;
+      }
+      .diagramm__txt--other{transform: scale(1.1);}
+    }
+    &.laptop{
+      .laptop{transform: scale(1.05);}
+      .diagramm__pic-laptop{
+        display: block;
+        animation: fadeLeft .5s both;
+      }
+      .diagramm__txt--laptop{transform: scale(1.1);}
+    }
+    &.tv{
+      .tv{transform: scale(1.05);}
+      .diagramm__pic-tv{
+        display: block;
+        animation: fadeRight .5s both;
+      }
+      .diagramm__txt--tv{transform: scale(1.1);}
+    }
+    &.phone{
+      .phone{transform: scale(1.05);}
+      .diagramm__pic-phone{
+        display: block;
+        animation: fadeLeft .5s both;
+      }
+      .diagramm__txt--phone{transform: scale(1.1);}
+    }
+    &.camera{
+      .camera{transform: scale(1.05);}
+      .diagramm__pic-camera{
+        display: block;
+        animation: fadeRight .5s both;
+      }
+      .diagramm__txt--camera{transform: scale(1.1);}
+    }
+  }
+  &__pic{
+    position: absolute;
+    display: none;
+    opacity: 0;
+    img{width: 100%;}
+    &-phone{
+      top: -9rem;
+      left: -1rem;
+      width: 23.3rem;
+    }
+    &-laptop{
+      top: -15rem;
+      left: -29.5rem;
+      width: 59rem;
+    }
+    &-tv{
+      top: -12rem;
+      right: -27rem;
+      width: 54.9rem;
+    }
+    &-camera{
+      top: -4rem;
+      right: -26rem;
+      width: 52.4rem;
+    }
+    &-other{
+      top: -6rem;
+      right: -21rem;
+      width: 43.5rem;
+    }
+  }
+}
+.js-d-other,.js-d-camera,.js-d-laptop,.js-d-tv,.js-d-phone{cursor: pointer;}
+@keyframes fadeRight {
+  from { transform: translateX(50%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes fadeLeft {
+  from { transform: translateX(-50%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@media only screen and (max-width : 767px){
+  .diagramm{margin-top: 6rem;}
+  .diagramm .blc-title{margin-bottom: 6rem;}
+  .diagramm__main{
+    width: 100%;
+    padding-top: 100%;
+    height: auto;
+  }
+  .diagramm__wrap{
+    padding: 0 8rem;
+    margin: 0 auto;
+    max-width: 40rem;
+  }
+  .diagramm__txt{
+    font-size: 1.2rem;
+    &:hover{transform: none;}
+  }
+  .diagramm__txt b{font-size: 1.6rem;}
+  .diagramm__txt--big b{font-size: 1.8rem;}
+  .diagramm__txt--big{font-size: 1.4rem;}
+  .diagramm__txt--camera {
+    top: 3rem;
+    right: -9rem;
+  }
+  .diagramm__txt--other{right: -7rem;}
+  .diagramm__txt--laptop {
+    top: 10rem;
+    left: -7rem;
+  }
+}

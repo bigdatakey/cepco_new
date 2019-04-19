@@ -1,0 +1,130 @@
+.history{
+  &__wrap{
+    margin: 0 auto;
+    max-width: 105.2rem;
+    position: relative;
+    &:before{
+      content: '';
+      display: block;
+      border-left: 1px dashed rgba(0, 0, 0, .4);
+      position: absolute;
+      left: 50%;
+      top: 6rem;
+      bottom: 6rem;
+    }
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    min-height: 11rem;
+    margin-bottom: 16rem;
+    &:last-child{margin-bottom: 0;}
+    &-icn{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 11rem;
+      height: 11rem;
+      border-radius: 50%;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img{
+        max-width: unset;
+        height: 100%;
+        margin: 0 auto;
+      }
+    }
+    &-year{
+      font-weight: 600;
+      font-size: 3.6rem;
+      color: #2F303E;
+      width: 50%;
+    }
+    &-txt{
+      font-weight: 300;
+      font-size: 1.7rem;
+      line-height: 2.4rem;
+      width: 50%;
+    }
+    &:nth-child(odd){
+      .history__item-year{
+        text-align: right;
+        padding-right: 14.3rem;
+      }
+      .history__item-txt{
+        text-align: left;
+        padding-left: 14.3rem;
+      }
+    }
+    &:nth-child(even){
+      flex-direction: row-reverse;
+      .history__item-year{
+        text-align: left;
+        padding-left: 14.3rem;
+      }
+      .history__item-txt{
+        text-align: right;
+        padding-right: 14.3rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width : 1024px){
+  .history{
+    &__item{
+      &:nth-child(odd){
+        .history__item-year{
+          padding-right: 10rem;
+        }
+        .history__item-txt{
+          padding-left: 10rem;
+        }
+      }
+      &:nth-child(even){
+        .history__item-year{
+          padding-left: 10rem;
+        }
+        .history__item-txt{
+          padding-right: 10rem;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width : 767px){
+  .history{
+    &__wrap{
+      &:before{display: none;}
+    }
+    &__item{
+      display: block;
+      margin-bottom: 6rem;
+      &:last-child{margin-bottom: 0;}
+      &-icn{
+        position: static;
+        transform: none;
+        width: 11rem;
+        height: 11rem;
+        margin: 0 auto 1rem;
+      }
+      &-year{
+        font-size: 3rem;
+        width: 100%;
+        margin-bottom: 1rem;
+        text-align: center !important;
+        padding: 0 !important;
+      }
+      &-txt{
+        width: 100%;
+        text-align: center !important;
+        padding: 0 !important;
+      }
+    }
+  }
+}

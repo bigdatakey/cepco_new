@@ -1,0 +1,174 @@
+.order{
+  &__icns{
+    margin: 5.2rem auto 7.3rem;
+    max-width: 92rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__icn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 8rem;
+    &-pic{
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      background: center center no-repeat #C4C4C4;
+      &--1{background-image: url(../../img/steps/diagnostic.svg); background-size: 3rem auto;}
+      &--2{background-image: url(../../img/steps/infix.svg); background-size: 3.4rem auto;}
+      &--3{background-image: url(../../img/steps/fixed.svg); background-size: 2.8rem auto;}
+      &--4{background-image: url(../../img/steps/ready.svg); background-size: 3.4rem auto;}
+      &--5{background-image: url(../../img/steps/end.svg); background-size: 3.8rem auto;}
+      &--ready{
+        background-color: #A1C77A;
+      }
+      &--active{
+        background-color: #F1D574;
+      }
+      &--ended{
+        position: relative;
+        &:after{
+          content: '';
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 9.6rem;
+          height: 9.6rem;
+          border: 3px solid #A1C77A;
+          border-radius: 50%;
+          box-shadow: 0 0 0 .5rem #fff inset;
+        }
+      }
+    }
+    &-txt{
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      font-weight: 500;
+      white-space: nowrap;
+      color: rgba(47, 48, 62, .61);
+    }
+    &-dotes{
+      flex-grow: 1;
+      padding-top: 3.9rem;
+      border-bottom: .4rem dotted #C4C4C4;
+      &--ready{border-color: #A1C77A;}
+      &--active{border-color: #F1D574;}
+    }
+  }
+  &__tab{
+    margin: 4.2rem auto;
+    max-width: 77.5rem;
+    &-header-row{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: .75px solid rgba(0, 0, 0, .3);
+      border-bottom: .75px solid rgba(0, 0, 0, .3);
+      padding: 2rem 0;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      &:first-child{margin-top: 0;}
+      .order__tab-col{font-weight: 500;}
+    }
+    &-col{
+      width: 50%;
+      text-align: center;
+      font-weight: 300;
+      font-size: 1.7rem;
+      line-height: 2.4rem;
+      padding: 0 1rem;
+    }
+    &-row{
+      padding: 1rem 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      //.order__tab-col{margin: 1rem 0;}  
+		&:last-child{
+			padding-bottom: 0;
+			.order__tab-col:last-child{margin-bottom: 0;}
+		}
+    }
+    &-footer-row{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: .75px solid rgba(0, 0, 0, .3);
+      padding-top: 2rem;
+      .order__tab-col{font-weight: 500;}
+    }
+    &-btn{margin: 0 auto;}
+    &-end-txt{
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width : 767px){
+  .order{
+    &__icns{
+      margin: 5.2rem auto;
+    }
+    &__icn{
+      width: 4rem;
+      position: relative;
+      &-pic{
+        width: 4rem;
+        height: 4rem;
+        &--1{background-size: 1.5rem auto;}
+        &--2{background-size: 1.7rem auto;}
+        &--3{background-size: 1.4rem auto;}
+        &--4{background-size: 1.7rem auto;}
+        &--5{background-size: 1.9rem auto;}
+        &--ended{
+          &:after{
+            width: 5.6rem;
+            height: 5.6rem;
+          }
+        }
+        &--active + .order__icn-txt{display: block;}
+      }
+      &-txt{
+        display: none;
+        font-size: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &:hover{
+        .order__icn-txt{display: block;}
+      }
+      &-dotes{
+        padding-top: 1.9rem;
+        border-bottom-width: .2rem;
+      }
+    }
+    &__tab{
+      &-header-row{
+        display: block;
+        border-bottom: none;
+        margin: 0;
+        .order__tab-col:last-child{display: none;}
+      }
+      &-col{
+        width: 100%;
+        padding: 0;
+      }
+      &-row{
+        padding: 0 0 1.2rem 0;
+        display: block;
+        .order__tab-col{margin: .6rem 0;}      
+      }
+      &-footer-row{
+        display: block;
+      }
+      &-btn{margin: 2rem auto 0;}
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.pop-services{
+  margin: 7.5rem 0;
+  &__list{
+    max-width: 78rem;
+    margin: 3.6rem auto 0;
+    columns: 3;
+    column-gap: 12.8rem;
+    li{
+      break-inside: avoid;
+      padding-bottom: 1.6rem;
+      font-size: 1.3rem;
+      font-weight: 100;
+      a{
+        color: #2F303E;
+        text-decoration: underline;
+        &:hover{text-decoration: none;}
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 767px){
+  .pop-services{
+    &__list{
+      columns: 2;
+      column-gap: 3rem;
+    }
+  }
+}

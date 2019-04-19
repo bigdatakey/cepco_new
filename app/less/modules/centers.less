@@ -1,0 +1,39 @@
+.center{
+  &__map{
+    height: 38.6rem;
+  }
+  &__list{
+    text-align: center;
+    margin: 4.2rem 0 7rem;
+    li{
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 2.1rem;
+      font-size: 1.7rem;
+      line-height: 2.1rem;
+      background: url(../../img/icn/check-grey.svg) 0 center no-repeat;
+      background-size: 1.6rem auto;
+      margin: 0 2.4rem;
+    }
+  }
+}
+
+@media only screen and (max-width : 767px){
+  .center{
+    margin-bottom: 0;
+    &__map{
+      height: 28rem;
+    }
+    &__list{
+      text-align: left;
+      margin: 4.2rem 0 7rem;
+      li{
+        display: block;
+        padding-left: 2.5rem;
+        background: url(../../img/icn/check-grey.svg) 0 .3rem no-repeat;
+        margin: 1rem 0;
+        &:last-child{margin-bottom: 0;}
+      }
+    }
+  }
+}

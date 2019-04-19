@@ -1,0 +1,125 @@
+<div class="page addresses-page">
+  <div class="cont">
+    <h1 class="blc-title">Адреса сервисов</h1>
+    <div class="addresses-desc">
+      <div class="addresses-desc__item">
+        <h3 class="addresses-desc__title">Мастерские СЕРСО</h3>
+        <p class="addresses-desc__txt">В мастерских СЕРСО можно сдать в ремонт и получить отремонтированную тенхику. </p>
+      </div>
+      <div class="addresses-desc__item">
+        <h3 class="addresses-desc__title">Приемные пункты СЕРСО</h3>
+        <p class="addresses-desc__txt">В приёмных пунктах вы можете сдать технику в ремонт и забрать её из ремонта. </p>
+      </div>
+      <div class="addresses-desc__item">
+        <h3 class="addresses-desc__title">Пункты Boxberry</h3>
+        <p class="addresses-desc__txt">В пунктах приёма/выдачи boxberry вы можете сдать технику в ремонт (забрать из ремонта) только при 100% оплате ремонта через сайт.</p>
+      </div>
+    </div>
+    <div class="addresses">
+      <div class="addresses__filter">
+        <div class="addresses__filter-item">
+          <label class="examples__filter-item">
+            <input type="radio" name="filter" value="all" checked>
+            <span class="examples__filter-item-txt">Все</span>
+          </label>
+        </div>
+        <div class="addresses__filter-item">
+          <label class="examples__filter-item">
+            <input type="radio" name="filter" value="workshops">
+            <span class="examples__filter-item-txt">Мастерские</span>
+          </label>
+        </div>
+        <div class="addresses__filter-item">
+          <label class="examples__filter-item">
+            <input type="radio" name="filter" value="points">
+            <span class="examples__filter-item-txt">Приемные пункты</span>
+          </label>
+        </div>
+        <div class="addresses__filter-item">
+          <label class="examples__filter-item">
+            <input type="radio" name="filter" value="boxberry">
+            <span class="examples__filter-item-txt">Пункты Boxberry</span>
+          </label>
+        </div>
+      </div>
+      <div class="addresses__main">
+        <div class="addresses__bar">
+          <form action="#" method="get" class="addresses__search">
+            <input type="search" class="input addresses__search-input" name="search" placeholder="Поиск...">
+          </form>
+          <div class="addresses__scroll js-scroll-bar">
+              <div class="addresses__scroll-group">
+                <div class="addresses__scroll-title addresses__scroll-title--blue">Мастерские СЕРСО</div>
+                <div class="addresses__scroll-item active">
+                  <div class="addresses__scroll-name">Центральный приемный пункт СЕРСО</div>
+                  <div class="addresses__scroll-txt">Колодезный пер., д. 3, стр. 25 <br>м. Преображенская площадь</div>
+                  <div class="addresses__scroll-row">
+                    <div class="addresses__scroll-left">
+                      <div class="addresses__scroll-time">9:00 - 21:00</div>
+                      <a href="#" class="addresses__scroll-more">Подробнее</a>
+                    </div>
+                    <div class="addresses__scroll-right">
+                      <div class="addresses__scroll-disantion">1,6 км</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="addresses__scroll-item">
+                  <div class="addresses__scroll-name">ТРЦ “Хорошо”</div>
+                  <div class="addresses__scroll-txt">Хорошёвское шоссе, дом 27 <br>м. Хорошёвская, м. Полежаевская</div>
+                  <div class="addresses__scroll-row">
+                    <div class="addresses__scroll-left">
+                      <div class="addresses__scroll-time">10:00 - 22:00</div>
+                    </div>
+                    <div class="addresses__scroll-right">
+                      <div class="addresses__scroll-disantion">1,6 км</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="addresses__scroll-group">
+                <div class="addresses__scroll-title addresses__scroll-title--green">Приемные пункты СЕРСО</div>
+                <div class="addresses__scroll-item">
+                  <div class="addresses__scroll-name">ТРЦ “Хорошо”</div>
+                  <div class="addresses__scroll-txt">Хорошёвское шоссе, дом 27 <br>м. Хорошёвская, м. Полежаевская</div>
+                  <div class="addresses__scroll-row">
+                    <div class="addresses__scroll-left">
+                      <div class="addresses__scroll-time">10:00 - 22:00</div>
+                    </div>
+                    <div class="addresses__scroll-right">
+                      <div class="addresses__scroll-disantion">1,8 км</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="addresses__scroll-item">
+                  <div class="addresses__scroll-name">ТРЦ “Хорошо”</div>
+                  <div class="addresses__scroll-txt">Хорошёвское шоссе, дом 27 <br>м. Хорошёвская, м. Полежаевская</div>
+                  <div class="addresses__scroll-row">
+                    <div class="addresses__scroll-left">
+                      <div class="addresses__scroll-time">10:00 - 22:00</div>
+                    </div>
+                    <div class="addresses__scroll-right">
+                      <div class="addresses__scroll-disantion">1,8 км</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>          
+        </div>
+        <div class="addresses__map" id="map"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    ymaps.ready(init);
+    var map;						
+    function init(){     
+        map = new ymaps.Map("map", {
+            center: [55.796273, 37.700954],
+            zoom: 16,
+            controls: []
+        });
+        map.behaviors.disable('scrollZoom');
+    };        
+</script>

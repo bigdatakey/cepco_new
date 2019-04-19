@@ -1,0 +1,51 @@
+<div class="page contacts">
+  <div class="cont">
+    <h1 class="blc-title">Контакты</h1>
+    <div class="contacts__wrap">
+      <div class="contacts__name">Центральный сервисный центр СЕРСО</div>
+      <div class="contacts__item">
+        г. Москва, Колодезный пер., д. 3, стр. 25 <br>м. Преображенская площадь
+      </div>
+      <div class="contacts__item">
+        <a class="contacts__mail" href="mailto:info@cepco.ru">info@cepco.ru</a>
+      </div>
+      <div class="contacts__item">
+        <div class="contacts__messagers">
+          <div class="contacts__messagers-txt">Связаться через</div>
+          <ul class="contacts__messagers-list">
+            <li><a href="#" target="_blank" class="contacts__messagers-link contacts__messagers-link--whatsapp" title="WhatsApp">WhatsApp</a></li>
+            <li><a href="#" target="_blank" class="contacts__messagers-link contacts__messagers-link--facebook" title="Facebook">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contacts__item">
+        <a class="contacts__addresses" href="#">Все адреса сервисов</a>
+      </div>
+    </div>
+  </div>
+  <div class="contacts__map" id="map"></div>
+</div>
+
+<script>
+    ymaps.ready(init);
+    var map;						
+    function init(){     
+        map = new ymaps.Map("map", {
+            center: [55.796273, 37.700954],
+            zoom: 16,
+            controls: []
+        });
+        map.behaviors.disable('scrollZoom');
+        placemark = new ymaps.Placemark(
+            [55.796273, 37.700954],
+            { 
+                iconCaption: 'Колодезный пер., д. 3, стр. 25',
+                balloonContent: 'Колодезный пер., д. 3, стр. 25'
+            },
+            {
+                preset: 'islands#redDotIconWithCaption'
+            }
+        );
+        map.geoObjects.add(placemark);
+    };        
+</script>

@@ -1,0 +1,44 @@
+.page-404{
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__main{
+    width: 100%;
+    max-width: 77.5rem;
+    img{
+      max-width: 57.2rem;
+      margin: 0 auto 7rem;
+      max-height: 50vh;
+      max-width: 100%;
+    }
+    .blc-title{margin-bottom: 2rem;}
+  }
+  &__txt{
+    margin-bottom: 3.4rem;
+    font-size: 1.7rem;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+  &__btn{margin: 0 auto;}
+}
+
+@media only screen and (max-width : 767px){
+  .page-404{
+    &__main{
+      img{
+        margin: 0 auto 2rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width : 767px) and (orientation: landscape){
+	.page-404__main .blc-title{font-size: 2.4rem;}
+	.page-404__txt{
+		font-size: 1.6rem;
+		margin-bottom: 2rem;
+	}
+	.page-404__main img{margin: 0 auto;}
+}

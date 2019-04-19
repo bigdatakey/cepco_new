@@ -1,0 +1,84 @@
+<div class="page contacts">
+  <div class="cont">
+    <h1 class="blc-title">Выбор постамата</h1>
+  </div>
+  <div class="addresses addresses--postmats">
+      <div class="addresses__main">
+        <div class="addresses__bar">
+          <form action="#" method="get" class="addresses__search">
+            <input type="search" class="input addresses__search-input" name="search" placeholder="Поиск...">
+          </form>
+          <div class="addresses__scroll js-scroll-bar">
+              <div class="addresses__scroll-group">
+                <div class="addresses__scroll-item active">
+                  <div class="addresses__scroll-name">Центральный приемный пункт СЕРСО</div>
+                  <div class="addresses__scroll-txt">Колодезный пер., д. 3, стр. 25 <br>м. Преображенская площадь</div>
+                  <div class="addresses__scroll-row">
+                    <div class="addresses__scroll-left">
+                      <div class="addresses__scroll-time">9:00 - 21:00</div>
+                    </div>
+                    <div class="addresses__scroll-right">
+                      <div class="addresses__scroll-disantion">1,6 км</div>
+                    </div>
+                  </div>
+                  <button class="btn btn--blue addresses__scroll-btn">Выбрать</button>
+                </div>
+                <div class="addresses__scroll-item">
+                  <div class="addresses__scroll-name">ТРЦ “Хорошо”</div>
+                  <div class="addresses__scroll-txt">Хорошёвское шоссе, дом 27 <br>м. Хорошёвская, м. Полежаевская</div>
+                  <div class="addresses__scroll-row">
+                    <div class="addresses__scroll-left">
+                      <div class="addresses__scroll-time">10:00 - 22:00</div>
+                    </div>
+                    <div class="addresses__scroll-right">
+                      <div class="addresses__scroll-disantion">1,6 км</div>
+                    </div>
+                  </div>
+                  <button class="btn btn--blue addresses__scroll-btn">Выбрать</button>
+                </div>
+                <div class="addresses__scroll-item">
+                  <div class="addresses__scroll-name">ТРЦ “Хорошо”</div>
+                  <div class="addresses__scroll-txt">Хорошёвское шоссе, дом 27 <br>м. Хорошёвская, м. Полежаевская</div>
+                  <div class="addresses__scroll-row">
+                    <div class="addresses__scroll-left">
+                      <div class="addresses__scroll-time">10:00 - 22:00</div>
+                    </div>
+                    <div class="addresses__scroll-right">
+                      <div class="addresses__scroll-disantion">1,6 км</div>
+                    </div>
+                  </div>
+                  <button class="btn btn--blue addresses__scroll-btn">Выбрать</button>
+                </div>
+                <div class="addresses__scroll-item">
+                  <div class="addresses__scroll-name">ТРЦ “Хорошо”</div>
+                  <div class="addresses__scroll-txt">Хорошёвское шоссе, дом 27 <br>м. Хорошёвская, м. Полежаевская</div>
+                  <div class="addresses__scroll-row">
+                    <div class="addresses__scroll-left">
+                      <div class="addresses__scroll-time">10:00 - 22:00</div>
+                    </div>
+                    <div class="addresses__scroll-right">
+                      <div class="addresses__scroll-disantion">1,6 км</div>
+                    </div>
+                  </div>
+                  <button class="btn btn--blue addresses__scroll-btn">Выбрать</button>
+                </div>
+              </div>
+          </div>          
+        </div>
+        <div class="addresses__map" id="map"></div>
+      </div>
+    </div>
+</div>
+
+<script>
+    ymaps.ready(init);
+    var map;						
+    function init(){     
+        map = new ymaps.Map("map", {
+            center: [55.796273, 37.700954],
+            zoom: 16,
+            controls: []
+        });
+        map.behaviors.disable('scrollZoom');
+    };        
+</script>

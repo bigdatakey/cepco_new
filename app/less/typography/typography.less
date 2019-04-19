@@ -1,0 +1,107 @@
+//reset
+ol,ul,li{    
+    margin:0;
+    padding: 0;    
+}
+ul li{list-style: none;}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+
+//link reset
+a{
+    text-decoration: none;
+    outline: none;
+    transition: .25s ease;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    &:-moz-any-link:focus ,
+    &:-moz-focusring,
+    &::-moz-focus-inner,
+    &::-moz-focus-outer{
+        outline: 0!important;
+        outline: none;
+    }
+    &:active {
+        outline: none;
+    }
+}
+
+//img reset
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+//body main
+body{
+  font: 1.6rem/1.2 'Museo Sans', sans-serif;
+  color: #2F303E;
+  font-weight: 400;
+  font-stretch: condensed;
+  opacity: 1;	
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+}
+
+//title
+.blc-title{
+  font-size: 3.6rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+
+//article
+.article{
+  font-size: 1.7rem;
+  line-height: 1.4;
+  font-weight: 300;
+  p{
+    margin: 2.4rem 0;
+    &:first-child{margin-top: 0;}
+    &:last-child{margin-bottom: 0;}
+  }
+  h1,h2{
+    font-size: 3.6rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3.6rem;
+  }
+  h3{
+    margin: 2.8rem 0;
+    font-weight: 600;
+    font-size: 2.4rem;
+    text-align: center;
+    &:first-child{margin-top: 0;}
+  }
+  &__main-pic{
+    width: 100%;
+    //border-radius: .5rem;
+    margin: 3.6rem 0 4.6rem;
+    &:last-child{margin-bottom: 0;}
+  }
+}
+
+.rub{
+	font-style: normal;
+	font-family: 'ALS Rubl';
+}
+.rub-bold{
+	font-style: normal;
+	font-family: 'ALS Rubl';
+}
+
+@media only screen and (max-width : 767px){
+  .blc-title,.article h1,.article h2{font-size: 2.8rem;}
+  .article{
+    &__main-pic{
+      width: ~'calc(100% + 3rem)';
+      max-width: ~'calc(100% + 3rem)';
+      margin: 2.6rem 0 2.6rem -1.5rem;
+      border-radius: 0;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.phones{
+  margin: 7.5rem 0;
+  &__wrap{
+    margin-top: 4rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  &__item{
+    width: 25%;
+    text-align: center;
+    margin-bottom: 4.2rem;
+    &-pic{
+      width: 20rem;
+      max-width: 100%;
+      margin: 0 auto 1.8rem;
+    }
+    &-name{
+      color: #2F303E;
+      font-size: 1.7rem;
+      font-weight: 500;
+    }
+  }
+}
+
+@media only screen and (max-width : 767px){
+  .phones{
+    &__wrap{
+      justify-content: space-between;
+    }
+    &__item{
+      width: calc(50% - 6rem);
+    }
+  }
+}

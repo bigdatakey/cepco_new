@@ -1,0 +1,85 @@
+//rem basis
+html{font-size: 10px;}
+@media only screen and (max-width : 1199px){html{font-size: 9.5px;}}
+@media only screen and (max-width : 1099px){html{font-size: 9px;}}
+@media only screen and (max-width : 1023px){html{font-size: 8.5px;}}
+//@media only screen and (max-width : 991px){html{font-size: 8px;}}
+@media only screen and (max-width : 767px){html{font-size: 10px;}}
+@media only screen and (max-width : 359px){html{font-size: 9px;}}
+
+//main
+html, body{
+    min-height: 100%;
+    width: 100%;
+}
+body{
+	background: #fff;
+    min-width: 310px; 
+    min-height: 100%;
+    position: relative;
+}
+
+//clearfix
+.clearfix:before,
+.clearfix:after{
+    content: " ";
+    display: table;
+}
+.clearfix:after {clear: both;}
+.clearfix{zoom: 1;}
+
+//box-sizing
+*, 
+*:before, 
+*:after, 
+input[type="search"]{
+    box-sizing: border-box;
+}
+
+//messages
+.browserhappy{
+    background: red;
+    text-align: center;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    font-size: 20px;
+    color: #fff;
+    strong{text-transform: uppercase;}
+    a{
+        color: yellow;
+        text-decoration: underline;
+        &:hover{text-decoration: none;}
+    }
+}
+
+//layout
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.cont{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  max-width: 120rem;
+}
+.main{
+  flex-grow: 1;
+}
+.page{
+  margin: 3.3rem 0 8.8rem;
+}
+
+@media only screen and (max-width : 767px){
+  .main{padding-top: 3.8rem;}
+  .page{margin: 4rem 0 4.4rem;}
+}
