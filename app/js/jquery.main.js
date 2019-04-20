@@ -13,9 +13,9 @@ $(document).ready(function(){
     })
   } else{
     //mob menu button
-    $('.js-mob-menu-btn').on('click', function(){
-      $('#js-mob-menu').toggleClass('open');
-    });    
+//    $('.js-mob-menu-btn').on('click', function(){
+//      $('#js-mob-menu').toggleClass('open');
+//    });    
   }
   //open search
   $('.js-search-btn').on('click', function(){
@@ -25,26 +25,6 @@ $(document).ready(function(){
   /*** diagramm ***/
   if($(window).width() >= 1100){
     var diagrammVrap = $('#js-diagramm');
-//    $( ".js-d-camera" ).hover(
-//      function() {diagrammVrap.addClass('camera')}, 
-//      function() {diagrammVrap.removeClass('camera')}
-//    );
-//    $( ".js-d-other" ).hover(
-//      function() {diagrammVrap.addClass('other')}, 
-//      function() {diagrammVrap.removeClass('other')}
-//    );
-//    $( ".js-d-laptop" ).hover(
-//      function() {diagrammVrap.addClass('laptop')}, 
-//      function() {diagrammVrap.removeClass('laptop')}
-//    );
-//    $( ".js-d-tv" ).hover(
-//      function() {diagrammVrap.addClass('tv')}, 
-//      function() {diagrammVrap.removeClass('tv')}
-//    );
-//    $( ".js-d-phone" ).hover(
-//      function() {diagrammVrap.addClass('phone')}, 
-//      function() {diagrammVrap.removeClass('phone')}
-//    );
     $( ".js-d-camera" ).hover( function() {
         diagrammVrap.removeClass('camera other laptop tv phone');
         diagrammVrap.addClass('camera');

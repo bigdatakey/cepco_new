@@ -1,4 +1,6 @@
 .header{
+  position: relative;
+  z-index: 110;
   &__main{
     padding: 2rem 0 1.3rem;
   }
@@ -106,26 +108,56 @@
       }
     }
   }
-  &__menu{
-    padding: 1.3rem 0;
+  &__menu{    
     background: #F7F7F7;
+    position: relative;
   }
 }
-.main-menu{
-  ul{
+.main-menu{  
+  > ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    li{
+    > li{
       margin: 0 2.6rem;
+      padding: 1.3rem 0;
       &:first-child{margin-left: 0;}
       &:last-child{margin-right: 0;}
-      a{
+      &:hover{
+        .main-menu__sub{display: block;}
+      }
+      > a{
         color: #2F303E;
         font-weight: 300;
         font-size: 1.5rem;
         white-space: nowrap;
         &:hover,&.active{color: #517DBD;}
+      }
+    }
+  }
+  &__sub{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #EDEDED;
+    padding-top: 2rem;
+    .cont{max-width: 82rem;}
+    ul{
+      font-size: 0;
+      li{
+        width: 25%;
+        display: inline-block;
+        margin-bottom: 2.6rem;
+        a{
+          color: rgba(47, 48, 62, 0.99);
+          font-size: 1.4rem;
+          font-weight: 300;         
+          &:hover{
+            color: #517DBD;
+          }
+        }
       }
     }
   }
@@ -137,7 +169,7 @@
   width: 100%;
   background: #fff;
   box-shadow: 0 4px 7px rgba(0, 0, 0, .04);
-  padding: 1.6rem 0;
+  padding: 0;
   z-index: 110;
   transform: translateY(-110%);
   transition: transform .25s ease;  
@@ -165,7 +197,11 @@
       white-space: nowrap;
     }
   }
-  .main-menu{padding: 0 1.5rem;}
+  .main-menu{
+    padding: 0 1.5rem;
+    >ul>li{padding: 1.6rem 0;}
+    .main-menu__sub{background: #F7F7F7;}
+  }
 }
 .mob-menu, .mob-header{
   display: none;
@@ -252,13 +288,15 @@
   }
   .fix-header__logo{padding-right: 0;}
   .main-menu{
-    ul{
-      li{
+    >ul{
+      >li{
         margin: 0 .8rem;
         &:first-child{margin-left: 0;}
         &:last-child{margin-right: 0;}
+        .cont {max-width: 100%;}
       }
     }
+    &__sub .cont {max-width: 100%;}
   }
 }
 @media only screen and (max-width : 767px){
