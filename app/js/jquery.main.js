@@ -13,9 +13,9 @@ $(document).ready(function(){
     })
   } else{
     //mob menu button
-//    $('.js-mob-menu-btn').on('click', function(){
-//      $('#js-mob-menu').toggleClass('open');
-//    });    
+    $('.js-mob-menu-btn').on('click', function(){
+      $('#js-mob-menu').toggleClass('open');
+    });    
   }
   //open search
   $('.js-search-btn').on('click', function(){
@@ -85,9 +85,9 @@ $(document).ready(function(){
   });
   
   /*** order popup ***/
-  $('.js-order-btn').on('click', function(){
-    $('#js-order').fadeToggle(250);
-  });
+//  $('.js-order-btn').on('click', function(){
+//    $('#js-order').fadeToggle(250);
+//  });
   
   //video-popup
   if($('#js-video-vrapper').length){
