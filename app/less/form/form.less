@@ -61,6 +61,7 @@
     margin: 3.6rem auto 3rem;
     max-width: 21rem;
   }
+  .sub-form__blc--select-z-top .dropdown.opened{z-index: 20 !important;}
   
   .jq-selectbox{
     display: block;
@@ -115,7 +116,9 @@
       }
     }
   }
-  .jq-selectbox.opened{z-index: 20 !important;}
+
+	
+//  .jq-selectbox.opened{z-index: 20 !important;}
   .dropdown.opened{    
     .jq-selectbox__dropdown{
       border-top: none;
@@ -125,6 +128,7 @@
     .jq-selectbox__select-text{border-radius: .5rem .5rem 0 0;}
   }
   .dropup.opened{
+    z-index: 20 !important;
     .jq-selectbox__dropdown{
       border-bottom: none;
       margin-bottom: -1px;
