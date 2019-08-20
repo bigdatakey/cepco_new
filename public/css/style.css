@@ -1,0 +1,11 @@
+.download_file{
+    text-align: center;
+    margin-top:80px;
+}
+.download_file a{
+    color: black;
+    text-decoration: underline;
+}
+.upText{
+    font-size:  1.9rem !important;
+}
